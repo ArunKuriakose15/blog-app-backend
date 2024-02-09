@@ -9,4 +9,10 @@ router.post("/signup",async(req,res)=>{
     res.json({status:"success"})
 })
 
+router.post("/signin",async(req,res)=>{
+    let input=req.body
+    let data=await signupModel.find()
+    res.json(data)
+})
+
 module.exports=router
