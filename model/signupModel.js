@@ -14,4 +14,4 @@ const signupSchema=mongoose.Schema(
     }
 )
 
-module.exports=mongoose.model("signup",signupSchema)
+module.exports=mongoose.model("users",signupSchema)
