@@ -57,9 +57,7 @@ router.post("/signin", async (req, res) => {
 
 
 
-    let data = await signupModel.find()
-    res.json(data)
-})
+
 
 
 
