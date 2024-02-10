@@ -5,12 +5,30 @@ const signupSchema=mongoose.Schema(
             type:String,
             required:true
         },
-        age:String,
-        phone:String,
-        address:String,
-        pincode:String,
-        email:String,
-        password:String
+        age:{
+            type:String,
+            required:true
+        },
+        phone:{
+            type:String,
+            required:true
+        },
+        address:{
+            type:String,
+            required:true
+        },
+        pincode:{
+            type:String,
+            required:true
+        },
+        email:{
+            type:String,
+            required:true
+        },
+        password:{
+            type:String,
+            required:true
+        }
     }
 )
 
