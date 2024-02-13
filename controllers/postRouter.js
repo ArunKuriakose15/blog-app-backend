@@ -12,15 +12,21 @@ router.post("/add", async (req, res) => {
 })
 
 router.get("/viewall", async (req, res) => {
-    let data = await postModel.find().populate("userId","name age phone address pincode email -_id").exec()
+    let data = await postModel.find().populate("userId", "name age phone address pincode email -_id").exec()
     res.json(data)
 })
 
 router.post("/viewown", async (req, res) => {
-    let data= req.body
+    let data = req.body
     console.log(data)
     let result = await postModel.find(data)
     res.json(result)
+})
+
+router.post("/delete", async (req, res) => {
+    let input = req.body
+    let response = await postModel.deleteOne(input)
+    res.json({ status: "success" })
 })
 
 
