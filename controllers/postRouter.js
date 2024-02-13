@@ -17,9 +17,10 @@ router.get("/viewall", async (req, res) => {
 })
 
 router.post("/viewown", async (req, res) => {
-    let input=req.body
-    let data = await postModel.find(input)
-    res.json(data)
+    let data= req.body
+    console.log(data)
+    let result = await postModel.find(data)
+    res.json(result)
 })
 
 
